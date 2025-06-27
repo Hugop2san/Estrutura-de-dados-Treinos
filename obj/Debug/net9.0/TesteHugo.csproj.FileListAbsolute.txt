@@ -1,0 +1,14 @@
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\bin\Debug\net9.0\TesteHugo.exe
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\bin\Debug\net9.0\TesteHugo.deps.json
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\bin\Debug\net9.0\TesteHugo.runtimeconfig.json
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\bin\Debug\net9.0\TesteHugo.dll
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\bin\Debug\net9.0\TesteHugo.pdb
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\TesteHugo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\TesteHugo.AssemblyInfoInputs.cache
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\TesteHugo.AssemblyInfo.cs
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\TesteHugo.csproj.CoreCompileInputs.cache
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\TesteHugo.dll
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\refint\TesteHugo.dll
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\TesteHugo.pdb
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\TesteHugo.genruntimeconfig.cache
+C:\Users\SAMSUNG\Desktop\Treino-c#\TesteHugo\obj\Debug\net9.0\ref\TesteHugo.dll
