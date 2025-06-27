@@ -33,6 +33,7 @@ namespace TreinoHugo
 
                 Console.Write("Salary: ");
                 double salary = double.Parse( Console.ReadLine(), CultureInfo.InvariantCulture) ;
+                //poderia usar o TryParse para tratar o erro de conversão de string para double
 
                 bool idexistente = f.Any(x => x.Id == id);
                 //ArgumentNullException
