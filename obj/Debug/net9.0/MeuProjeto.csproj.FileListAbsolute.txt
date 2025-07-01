@@ -12,3 +12,4 @@ C:\Users\SAMSUNG\Desktop\Treino-c#\MeuProjeto\obj\Debug\net9.0\refint\MeuProjeto
 C:\Users\SAMSUNG\Desktop\Treino-c#\MeuProjeto\obj\Debug\net9.0\MeuProjeto.pdb
 C:\Users\SAMSUNG\Desktop\Treino-c#\MeuProjeto\obj\Debug\net9.0\MeuProjeto.genruntimeconfig.cache
 C:\Users\SAMSUNG\Desktop\Treino-c#\MeuProjeto\obj\Debug\net9.0\ref\MeuProjeto.dll
+C:\Users\SAMSUNG\Desktop\Treino-c#\MeuProjeto\obj\Debug\net9.0\MeuProjeto.sourcelink.json
