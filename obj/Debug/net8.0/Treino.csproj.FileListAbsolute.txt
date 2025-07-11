@@ -12,3 +12,4 @@ C:\Users\SAMSUNG\Desktop\Treino-csharp\Treino\obj\Debug\net8.0\refint\Treino.dll
 C:\Users\SAMSUNG\Desktop\Treino-csharp\Treino\obj\Debug\net8.0\Treino.pdb
 C:\Users\SAMSUNG\Desktop\Treino-csharp\Treino\obj\Debug\net8.0\Treino.genruntimeconfig.cache
 C:\Users\SAMSUNG\Desktop\Treino-csharp\Treino\obj\Debug\net8.0\ref\Treino.dll
+C:\Users\SAMSUNG\Desktop\Treino-csharp\Treino\obj\Debug\net8.0\Treino.sourcelink.json

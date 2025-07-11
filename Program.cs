@@ -1,6 +1,9 @@
 ﻿using System;
-using Treino.Entities;
 using System.Globalization;
+using Treino.Entities;
+using Treino.Services;
+
+//using System.Text.Encoding;
 
 namespace Treino
 {
@@ -8,51 +11,39 @@ namespace Treino
     {
         static void Main(string[] args) 
         {
+
+            Console.WriteLine("Enter rental data");
+            Console.Write("Car model: ");   
+            Vehicle vehicle = new Vehicle(Console.ReadLine());
+
+            Console.Write("Pick-up date (dd/MM/yyyy hh:mm): ");
+            DateTime start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+
+            Console.Write("Return date (dd/MM/yyyy hh:mm): ");
+            DateTime returnDate = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+           
+            Console.Write("Enter price per hour: ");
+            double pricePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write("Enter price per day: ");
+            double pricePerDay = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+
+            CarRental carRental = new(start ,returnDate, vehicle );       
             
+            RentalService rentalService = new(pricePerHour, pricePerDay);
 
-
-            Console.WriteLine("Enter account data");
+            rentalService.ProcessInvoice(carRental);    //rentalservice chama o metodo processinvoice que recebe atributo do tipo carRental
             
-            int number = 2030;
-            Console.Write("Number: "+number);
-            
-            string holder = "Hugo santos";
-            Console.WriteLine("Holder: "+ holder);
-            
-            Console.WriteLine("Initial balance: ");
-            double balance = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture) ;
-            
-            //double withdrawLimit = 500.00;
-            Console.WriteLine("Withdraw limit: 1k");
-
-            Account account = new Account(number, holder, balance);
-
-
-            Console.WriteLine();
-            Console.WriteLine("account data:");
-            Console.WriteLine($"Number {account.Number}, \nHolder: {account.Holder}, \nBalance: {account.Balance.ToString("F2", new CultureInfo("pt-BR"))}, \nWithdraw Limit {account.WithdrawLimit.ToString("F2", new CultureInfo("pt-BR"))}");
-
-            Console.WriteLine();
-            Console.Write("Enter amount for withdraw: ");
-            double amount = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            try
-            {
-                account.Withdraw(amount);
-                Console.WriteLine($"New balance: {account.Balance.ToString("F2", new CultureInfo("pt-BR"))}");
-            }
-            catch (ArgumentException e)
-            {
-                Console.WriteLine($"Withdraw error: {e.Message}");
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine($"Input error: {e.Message}");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Unexpected error: {e.Message}");
-            }
+            Console.WriteLine("INVOICE: ");
+            Console.WriteLine(carRental.Invoice); 
+            // carRental tem o atributo invoice que é do tipo Invoice, que por sua vez tem o método ToString() 
+            // que retorna os valores formatados
+        
+        
+        
         }
+            
     }   
 }
