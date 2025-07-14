@@ -13,6 +13,6 @@ Redução de acoplamento entre as camadas
 
 Adesão ao Princípio da Inversão de Dependência (DIP) e Responsabilidade Única (SRP)
 
-🧠 Dica prática:
+## 🧠 Dica prática:
 Instancie as dependências concretas no ponto mais alto do sistema (nível de orquestração), e passe abstrações (interfaces) para os níveis mais baixos (serviços, regras).
 Isso permite que suas classes de lógica de negócio sejam reutilizáveis, testáveis e independentes de detalhes específicos.
