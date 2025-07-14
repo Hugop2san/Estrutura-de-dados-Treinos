@@ -32,7 +32,7 @@ namespace Treino
 
             CarRental carRental = new(start ,returnDate, vehicle );       
             
-            RentalService rentalService = new(pricePerHour, pricePerDay);
+            RentalService rentalService = new(pricePerHour, pricePerDay, new BrasilTaxService());
 
             rentalService.ProcessInvoice(carRental);    //rentalservice chama o metodo processinvoice que recebe atributo do tipo carRental
             

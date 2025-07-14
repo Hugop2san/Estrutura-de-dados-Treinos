@@ -8,16 +8,14 @@ namespace Treino.Services
     {
          public double PricePerHour { get; private set; }
         public double PricePerDay { get; private set; }
-
-       // private ITaxService _taxService;
-
-        public RentalService(double pricePerHour, double pricePerDay ) {
+        private ITaxService _TaxService ; 
+        public RentalService(double pricePerHour, double pricePerDay, ITaxService taxservice) {
             PricePerHour = pricePerHour;
             PricePerDay = pricePerDay;
-             
+            _TaxService = taxservice;    
         }
 
-        private BrasilTaxService _BrasilTaxService = new BrasilTaxService();        
+               
         
         public void ProcessInvoice(CarRental carrental) // condicionais das regras de negocio
         {
@@ -35,7 +33,7 @@ namespace Treino.Services
                 basicPayment = PricePerDay * Math.Ceiling(duration.TotalDays);
             }
 
-            double tax = _BrasilTaxService.Tax(basicPayment);
+            double tax = _TaxService.Tax(basicPayment);
 
             carrental.Invoice = new Invoice(basicPayment, tax);
         }

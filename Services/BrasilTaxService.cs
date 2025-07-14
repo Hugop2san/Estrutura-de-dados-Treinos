@@ -2,7 +2,7 @@ using System;
 
 namespace Treino.Services
 {
-    public class BrasilTaxService
+    public class BrasilTaxService : ITaxService
     {
         public double Tax(double amount)
         {
