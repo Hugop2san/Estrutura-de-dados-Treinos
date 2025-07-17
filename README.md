@@ -1,4 +1,6 @@
-📌 Fala, rede! Hoje mergulhei nos conceitos de design usando Orientação a Objetos — mais especificamente na ideia de separar responsabilidades entre classes.
+📌 Fala, rede! 
+Exercicio foca na ideia de gerenciamento de estacionamento.
+Hoje mergulhei nos conceitos de design usando Orientação a Objetos — mais especificamente na ideia de separar responsabilidades entre classes.
 
 Pra você ter uma noção, imagine que temos uma classe que representa o aluguel de um carro (CarRental) e outra que representa a fatura desse aluguel (Invoice). Em vez de juntar tudo numa só, cada uma fica responsável por uma parte do sistema — isso é o que chamamos de encapsulamento.
 
