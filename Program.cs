@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using Treino.Entities;
+using Treino.Services;
 
 namespace Treino
 {
@@ -6,54 +9,35 @@ namespace Treino
     {
         static void Main(string[] args) 
         {
-            PrintService<int> printSer= new();
+            List<Produto> listaprodutos= new List<Produto> ();
+
+            Console.WriteLine("Enter N Values :");
+            int values= int.Parse(Console.ReadLine()) ;
             
-           Console.WriteLine("How many Values ?");
-            int values= int.Parse(Console.ReadLine());
-
-            for (int i=0; i < values; i++)
+            for(int i =0; i < values; i++)
             {
-                Console.WriteLine($"value {i} :");
-                int value123= int.Parse(Console.ReadLine());
-                printSer.AddValue(value123);
+                Console.Write("Name of product and price (TV,1500.50) :");
+                string[] vect = Console.ReadLine().Split(',') ;
+                string name= vect[0];
+                double price= double.Parse(vect[1], CultureInfo.InvariantCulture);
+
+                listaprodutos.Add(new Produto(name , price)); //
             }
+            // Exibindo o mais caro!
+            Console.WriteLine("Exibindo o mais caro!");
 
-            Console.WriteLine("Print values: ");
-            printSer.Print();
+            //Produto max = new Produto (); 
+            CalculationService maxcalc= new();
 
-            Console.WriteLine();
-
-            Console.WriteLine("First value: ");
-            Console.WriteLine(printSer.First());
+             
+            Produto max = maxcalc.Max(listaprodutos);
+            Console.WriteLine( "Nome: "+max.Name + " Preço: "+max.Price );
+                
+            
 
         }
     }  
-    class PrintService<T>
-    {
-        private T[] _values= new T[10]; 
-        private int _count= 0;
-
-        public void AddValue(T value) 
-        {
-
-           _values[_count]= value;
-            _count++;
-        }
-
-        public T First()
-        {
-            return _values[0];
-        }
-
-        public void Print()
-        {
-            Console.Write("[");
-            for(int i=0; i<_count-1; i++){Console.Write(_values[i]+",");}
-            if(_count>0){ Console.Write(_values[_count-1]); } 
-            Console.Write("]");
-        }
 
 
-
-    } 
+    
 }
