@@ -16,6 +16,12 @@ public override bool Equals(object obj)
     Client other = obj as Client;
     return Email.Equals(other.Email);
 }
+```
+### 🧮 `GetHashCode()`
+Esse método retorna um número inteiro (hash) que representa o objeto. Ele é usado principalmente em coleções como HashSet<> ou Dictionary<> para organizar e buscar objetos rapidamente.
+Se você sobrescreve Equals(), também deve sobrescrever GetHashCode() para manter a consistência — ou seja, se dois objetos são iguais (Equals retorna true), eles devem ter o mesmo hash.
+
+```csharp 
 public override int GetHashCode()
     {
         return  Email.GetHashCode();
